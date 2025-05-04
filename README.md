@@ -86,6 +86,27 @@ This project implements an intelligent AI assistant that can process user querie
 - **Clear Feedback to Users**  
   Delivers concise and informative messages to users when issues occur, avoiding technical jargon and maintaining a helpful tone.
 
+
+## How to Run the Code
+
+### 1. Install `uv`
+
+First, install [uv](https://github.com/astral-sh/uv), a fast Python package manager:
+
+```bash
+pip install uv
+```
+### 2.  Run the Telegram Bot
+
+Once uv is installed, you can run the bot using:
+
+```bash
+uv run telegram_bot.py
+
+```
+
+
+
 ## Logs
 
 <pre>(s8) D:\Programming\EAG V1\S8 Share\S8 Share>uv run telegram_bot.py
@@ -207,66 +228,5 @@ FUNCTION_CALL: extract_webpage|input={"url": "https://www.formula1.com/en/result
 2025-05-03 21:56:30,455 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7480472448:AAFJQsNBUWwR_9HZQkzVCwx-zy4PuYN8bVQ/sendMessage "HTTP/1.1 200 OK"
 2025-05-03 21:56:39,947 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7480472448:AAFJQsNBUWwR_9HZQkzVCwx-zy4PuYN8bVQ/getUpdates "HTTP/1.1 200 OK"
 2025-05-03 21:56:50,131 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7480472448:AAFJQsNBUWwR_9HZQkzVCwx-zy4PuYN8bVQ/getUpdates "HTTP/1.1 200 OK" </pre>
-
-## Usage
-
-1. Run the client:
-   ```
-   python mcp_client.py
-   ```
-
-2. The agent will:
-   - Solve the mathematical problem
-   - Open Excel
-   - Merge the cells and create border to cell with thickness 4
-   - Add the answer as text in that cell in center of merged cell
-   - Take a screenshot of the Excel window
-   - Send the screenshot via email with the answer included in the message body# Final Result
-
-
-# MCP Agent with Excel and Email Integration
-
-This project implements an intelligent agent that can solve mathematical problems, display results in Microsoft Excel, and send screenshots via email MCP. It uses the MCP (Model Control Protocol) framework to connect a client with a server that provides various mathematical and utility tools.
-
-## Features
-
-- **Mathematical Operations**: Perform various mathematical calculations including addition, subtraction, multiplication, division, power, square root, cube root, factorial, log, remainder, trigonometric functions, and more.
-- **Excel Integration**: Automatically open Microsoft Excel,Merge the cells and create border to cell with thickness 4, and add text to visualize results.
-- **Email Functionality**: Take screenshots of the Excel window and send them via email with the results included in the message body.
-- **Logging**: Comprehensive logging of all operations for debugging and tracking.
-- **Gemini AI Integration**: Uses Google's Gemini AI model for intelligent problem-solving.
-
-## Project Structure
-
-- `mcp_server.py`: The server component that provides tools for mathematical operations, Excel manipulation, and email sending.
-- `mcp_client.py`: The client component that communicates with the server and uses Gemini AI to solve problems.
-- `*.log`: Log files generated during execution.
-
-## Usage
-
-1. Run the client:
-   ```
-   python main.py
-   ```
-
-2. The agent will:
-   - Solve the mathematical problem
-   - Open Excel
-   - Merge the cells
-   - Add the answer as text in that cell
-   - Take a screenshot of the Excel window
-   - Send the screenshot via email with the answer included in the message body# Final Result
-
-3. Check the log file for detailed information about the execution and iteration of the llm.
-
-## Customization
-
-### Changing the Query
-
-You can modify the query in `main.py` to solve different mathematical problems:
-
-```python
-query = """Find the ASCII values of characters in Banglore and then return sum of exponentials of those values. After getting the final answer, open Excel, merge the cell from {sc} to {ec} , add the answer as text, and send a screenshot of the Excel window via email to {email} with message as {message} and subject as {subject}."""
-```
 
    
