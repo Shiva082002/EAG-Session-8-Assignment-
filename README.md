@@ -1,4 +1,4 @@
-# EAG-Session-6-Assignment
+# EAG-Session-8-Assignment
 
 # AI Assistant with MCP Agent , Telegram bot , Google Sheets, Google Drive , and Email Integration
 
