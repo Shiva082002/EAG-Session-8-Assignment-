@@ -179,4 +179,4 @@ async def process_result(result: dict) -> dict:
 
 if __name__ == "__main__":
     # Run with SSE transport
-    mcp.run() 
+    mcp.run(transport="SSE") 
