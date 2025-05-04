@@ -35,7 +35,7 @@ AUTHORIZED_USERS = [
 ]
 
 # Create an MCP server
-mcp = FastMCP("SheetsMCP", host="0.0.0.0", port=8051)
+mcp = FastMCP("SheetsMCP", host="0.0.0.0", port=8890)
 
 def get_google_credentials():
     """Get or refresh Google API credentials"""
@@ -179,4 +179,4 @@ async def process_result(result: dict) -> dict:
 
 if __name__ == "__main__":
     # Run with SSE transport
-    mcp.run(transport="SSE") 
+    mcp.run(transport="sse")
